@@ -1,0 +1,251 @@
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+}
+
+li, ul {
+  margin: 0;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+#info {
+  background-color: white;
+  width: 100%;
+  display: inline-block;
+  padding: 5px;
+  top: 0;
+  height: 2em;
+}
+
+#top-info li, #other-info li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+#info h1, #info h2 {
+  margin: .25em 0;
+}
+
+#info h3, h4 {
+  margin: .25em 0;
+}
+
+#show-more {
+  cursor: pointer;
+}
+
+#other-info {
+  display: none;
+}
+
+/* Game Section */
+
+#game {
+  background-color: green;
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+}
+
+#stats ul, #table ul {
+  padding: 0;
+  list-style: none;
+}
+
+#stats h2, #stats h3, #stats h4, #stats h5, #stats h6, #table h2, #table h3, #table h4, #table h5, #table h6 {
+  margin: 0;
+}
+
+#stats li, #table li {
+  margin: 0;
+  vertical-align: top;
+}
+
+#stats > ul > li {
+  min-height: 7em;
+  min-width: 300px;
+  border: 5px solid #EEE;
+  
+}
+
+#stats ul#teams-info > li, ul#trick > li {
+  display: inline-block;
+}
+
+#stats ul#teams-info > li, ul.player-info > li, ul#trick > li {
+  padding: .5em;
+  margin: .5em;
+  background-color: #EEE;
+}
+
+#table {
+  padding: 2em;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+#table table {
+  margin: 0 auto;
+}
+
+#hand {
+  display: inline-block;
+  width: 50%;
+}
+
+
+#hand ul, #hand ul li {
+  display: inline-block;
+  padding: 0px;
+  margin: 5px;
+}
+
+.card-container {
+  min-width: 62px;
+  min-height: 90px;
+  position: relative;
+}
+
+.card {
+  min-width: 62px;
+  min-height: 90px;
+  padding: 8px;
+  border: 1px solid green;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  
+}
+
+.illegal {
+  opacity: 0.7;
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.winner {
+  opacity: 0.7;
+  background-color: yellow;
+  border-radius: 4px;
+}
+
+.played-card {
+  opacity: 0.7;
+  background-color: green;
+  border-radius: 4px;
+}
+
+.card p {
+  display: none;
+  background-color: #EEE;
+  padding: 5px;
+  border: 1px dotted #BBB;
+}
+
+.suit-hearts, .suit-diamonds {
+  color: red; 
+}
+
+.suit-clubs, .suit-spades {
+  color: black;
+}
+
+/* Player */
+
+.player-info {
+  min-height: 4em;
+  width: 120px;
+  background-color: #EEE;
+}
+
+.player-info > li {
+  width: 100%;
+  height: 100%;
+  min-height: 4em;
+}
+
+
+/* Prompt */
+
+#table-hand-container {
+  margin-bottom: 13em;
+}
+
+#prompt-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #E8E8E8;
+}
+
+#prompt {
+  width: 100%;
+  padding: 5px;
+  overflow: scroll;
+
+}
+
+#prompt {
+  text-align: center;
+  font-size: 125%;
+}
+
+#prompt input {
+  font-size: 120%;
+  line-height: 150%;
+}
+
+#options-container {
+  padding-bottom: 2em;
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 7px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #DFDFFF;
+  margin: 5px;
+  font-size: 110%;
+}
+
+@media (max-width: 1000px) {
+  #stats ul#teams-info > li, ul.player-info > li, ul#trick > li {
+    padding: 2px;
+    margin: 2px;
+    background-color: #EEE;
+  }
+  
+  #table {
+    padding: 0;
+  }
+  
+  .player-info {
+    width: 70px;
+  }
+  
+  #hand, #table {
+    width: 100%;
+  }
+}  
